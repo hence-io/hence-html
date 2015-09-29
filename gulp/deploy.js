@@ -18,10 +18,10 @@ let updateConfig = (file, done)=> {
   console.log(`updated ${file} to ${version}`);
 };
 
-gulp.task('deploy', function (done) {
+gulp.task('deploy', ['build'], function (done) {
   updateConfig('bower');
   updateConfig('package');
 
   //console.log(`version updated to ${version}. Committing and tagging now...`);
-  execSync(`gulp build && git add --all && git commit -m "- version bump" && git tag v${version} && git push && git push --tags`);
+  execSync(`git add --all && git commit -m "- version bump" && git tag v${version} && git push && git push --tags`);
 });

@@ -1,7 +1,7 @@
 {
 	"name": "hence-html",
 	"author": "Sean 'Blitz' Homer <sean.homer@therefore.ca>",
-	"version": "0.1.6",
+	"version": "0.1.8",
 	"description": "To safely output html within other components, easily.",
 	"main": "src/hence-html.js",
 	"scripts": {

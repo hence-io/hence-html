@@ -4,6 +4,7 @@
  */
 
 import Hence from 'hence-component-framework';
+import _isString from 'lodash/lang/isString';
 
 /**
  * HenceHtml Component
@@ -26,7 +27,14 @@ let HenceHtml = Hence.Ui({
    ********************************************************************************************************************/
 
     _renderContent(content) {
-    this.$.content.innerHTML = content;
+    let target = this.$.content;
+
+    // If the parameter comes through as an HTML node, we want to append it to ensure it displays
+    if (!_isString(content)) {
+      target.appendChild(content);
+    } else { // Else, just render it as raw html
+      target.innerHTML = content;
+    }
   }
 });
 

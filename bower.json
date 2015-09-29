@@ -1,0 +1,24 @@
+{
+  "name": "hence-html",
+  "version": "0.1.0",
+  "authors": [
+    "Sean 'Blitz' Homer <sean.homer@therefore.ca>"
+  ],
+  "description": "To safely output html within other components, easily.",
+  "keywords": [
+    "web-component",
+    "web-components",
+    "polymer"
+  ],
+  "main": "dist/hence-html.html",
+  "homepage": "https://github.com/homertherefore/hence-html/",
+  "ignore": [
+    "/.*",
+    "/comp/gulp/",
+    "/comp/test/"
+  ],
+  "dependencies": {"polymer":"Polymer/polymer#^1.0.0","font-awesome":"~4.3.0"},
+  "devDependencies": {
+    "web-component-tester": "*"
+  }
+}

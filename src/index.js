@@ -9,7 +9,10 @@ docReady(()=> {
   let componentPreviewBox = document.getElementById('component-previews');
 
   // Spawn various states of the component to preview them side by side
+  var content = document.createElement('div');
+  content.innerHTML = "This <b>is my html</b> Content";
+
   HenceHtml.appendElementTo({
-    content: "This <b>is my html</b> Content"
+    content: content
   }, componentPreviewBox);
 });

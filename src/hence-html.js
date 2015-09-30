@@ -26,7 +26,7 @@ let HenceHtml = Hence.Ui({
    ********************************************************************************************************************/
 
     _renderContent(content) {
-    let target = this.$.content;
+    let target = this;
 
     // If the parameter comes through as an HTML node, we want to append it to ensure it displays
     if (content instanceof Node) {
